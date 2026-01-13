@@ -1,0 +1,8 @@
+{
+  "overall_accuracy": 0.2616407982261641,
+  "yesno_accuracy": 0.4701195219123506,
+  "yesno_precision_macro": 0.2350597609561753,
+  "yesno_recall_macro": 0.5,
+  "yesno_f1_macro": 0.31978319783197834,
+  "openended_accuracy": 0.0
+}
