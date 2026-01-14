@@ -66,11 +66,12 @@ def main():
     ckpt_dir = out_dir / "checkpoints"
     ckpt_dir.mkdir(parents=True, exist_ok=True)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
+
     max_len = 32
     batch_size = 8
-    epochs = 5
-    lr = 1e-3
+    epochs = 20
+    lr = 1e-4
 
     ds = load_vqarad(data_dir)
 

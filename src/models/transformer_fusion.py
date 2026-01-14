@@ -37,7 +37,8 @@ class FusionTransformer(nn.Module):
         self.pos_emb = nn.Parameter(torch.zeros(1, max_text_len + max_img_tokens, d_model))
 
         enc_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=n_heads, batch_first=True)
-        self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers)
+        self.encoder = nn.TransformerEncoder(enc_layer, num_layers=n_layers, enable_nested_tensor=False)
+
 
         self.classifier = nn.Sequential(
             nn.Linear(d_model, 512),
