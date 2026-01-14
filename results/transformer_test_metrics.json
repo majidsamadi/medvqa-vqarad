@@ -1,8 +1,8 @@
 {
-  "overall_accuracy": 0.2616407982261641,
-  "yesno_accuracy": 0.4701195219123506,
-  "yesno_precision_macro": 0.2350597609561753,
-  "yesno_recall_macro": 0.5,
-  "yesno_f1_macro": 0.31978319783197834,
-  "openended_accuracy": 0.0
+  "overall_accuracy": 0.38802660753880264,
+  "yesno_accuracy": 0.6215139442231076,
+  "yesno_precision_macro": 0.640076643807987,
+  "yesno_recall_macro": 0.6251752262010959,
+  "yesno_f1_macro": 0.6288056206088993,
+  "openended_accuracy": 0.095
 }

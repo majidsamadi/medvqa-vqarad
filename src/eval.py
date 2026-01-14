@@ -57,7 +57,8 @@ def main():
     answer2id = {k: int(v) for k, v in vocab["answer2id"].items()}
     id2answer = {int(k): v for k, v in vocab["id2answer"].items()}
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    device = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
+
 
     ds = load_vqarad(args.data_dir)
     tokenizer = AutoTokenizer.from_pretrained("distilbert-base-uncased")
